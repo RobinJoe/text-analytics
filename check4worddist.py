@@ -2,7 +2,7 @@
 
 from collections import Counter
 
-with open ("digital-transformation.txt", "r") as f:
+with open ("/home/jr/Documents/Applications/wordcheckfile.txt", "r") as f:
     contents = f.read().split()
     print ("Word distribution is as follows")
     print (Counter (contents))
@@ -25,4 +25,3 @@ with open ("digital-transformation.txt", "r") as f:
 # Determiners, Prepositions, coordinating conjuctions, and Pronouns.
 
 # Include the ability to point the script at a file, and analyse that file.
-

@@ -2,7 +2,9 @@
 
 from collections import Counter
 
-with open ("/home/jr/Documents/Applications/wordcheckfile.txt", "r") as f:
+checkfile = input("Please enter the absolute pathway to the file (/home/user/directory/file.txt):")
+
+with open (checkfile, "r") as f:
     contents = f.read().split()
     print ("Word distribution is as follows")
     print (Counter (contents))

@@ -26,4 +26,3 @@ with open (checkfile, "r") as f:
 # Take out stop words:
 # Determiners, Prepositions, coordinating conjuctions, and Pronouns.
 
-# Include the ability to point the script at a file, and analyse that file.

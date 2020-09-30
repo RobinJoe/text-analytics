@@ -1,14 +1,16 @@
 # Calling the counter module to keep track of instances of a word
 
 from collections import Counter
+import re
 
 checkfile = input("Please enter the absolute pathway to the file (/home/user/directory/file.txt):")
 
 with open (checkfile, "r") as f:
-    contents = f.read().split()
-    print ("Word distribution is as follows")
-    print (Counter (contents))
-
+    contents = f.read() #Read the file first, otherwise it creates a TypeError
+    stopwordsout = re.sub(r"\b[a-zA-Z]{1,3}\b", "", contents) #Regex for finding three letter words (the, a, in, out, so, how, are, is etc.)
+    splitcontents = stopwordsout.split()
+    print ("Word distribution is as follows:")
+    print (Counter (splitcontents))
 
 # Test code
 
